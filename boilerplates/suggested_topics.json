@@ -1,0 +1,20 @@
+[
+    {
+        "id": "topic-1",
+        "title": "Beyond Prompting: Building your first agentic loop.",
+        "context": "Based on trend: Autonomous agents for sales automation on the rise.",
+        "mission_alignment": "High"
+    },
+    {
+        "id": "topic-2",
+        "title": "From Chat to Swarm: Scaling your first agent workflow.",
+        "context": "Based on trend: Anthropic introduces Computer Use capability for Claude.",
+        "mission_alignment": "High"
+    },
+    {
+        "id": "topic-3",
+        "title": "The Solo Founder's Guide to Multi-Agent Systems.",
+        "context": "Based on trend: Multi-agent systems (MAS) seen as next step in LLM evolution.",
+        "mission_alignment": "High"
+    }
+]
