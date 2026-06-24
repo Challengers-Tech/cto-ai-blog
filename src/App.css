@@ -92,16 +92,24 @@ body {
 
   & > div {
     flex: 1 1 0;
-    padding: 40px;
+    padding: 48px;
     background: #0d0d14;
-    transition: background 0.3s;
+    transition: all 0.3s ease;
+    border-right: 1px solid var(--border);
+
+    &:last-child {
+      border-right: none;
+    }
 
     &:hover {
-      background: #0f0f18;
+      background: #11111a;
+      box-shadow: inset 0 0 20px rgba(59, 130, 246, 0.05);
     }
 
     @media (max-width: 1024px) {
-      padding: 32px 20px;
+      padding: 32px 24px;
+      border-right: none;
+      border-bottom: 1px solid var(--border);
     }
   }
 
@@ -129,12 +137,9 @@ body {
   }
 }
 
-#docs {
-  border-right: 1px solid var(--border);
-
-  @media (max-width: 1024px) {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
+@media (max-width: 1024px) {
+  #next-steps {
+    flex-direction: column;
   }
 }
 
