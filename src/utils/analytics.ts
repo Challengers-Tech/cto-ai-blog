@@ -12,11 +12,18 @@ export interface AnalyticsEvent {
 
 /**
  * Tracks an event by sending it to the mock backend.
+ * Automatically excludes active owner sessions when 'exclude_analytics' is set.
  */
 export const trackEvent = async (name: string, properties: Record<string, any> = {}) => {
+  // Check if owner has opted to exclude their actions from statistics
+  if (typeof window !== 'undefined' && localStorage.getItem('exclude_analytics') === 'true') {
+    console.log(`[Analytics] [EXCLUDED] Bypassed event tracking for owner: ${name}`, properties);
+    return;
+  }
+
   const eventData: AnalyticsEvent = {
     event: name,
-    path: window.location.pathname,
+    path: typeof window !== 'undefined' ? window.location.pathname : '',
     properties
   };
 
